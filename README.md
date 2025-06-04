@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# ELIF-AI
+ELIF-AI is an interactive learning platform that uses the Feynman Technique. Users will input a concept to talk about and will explain their understanding to AI at a basic and rudimentary level
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+More actions
+## 🏗️ Development
 
-Currently, two official plugins are available:
+Install the dependencies:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    ```sh
+    npm install
+    ```
 
-## Expanding the ESLint configuration
+To start the development server:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will start the Vite development server and open your default browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Build
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+To create a production build:
+
+```sh
+npm run build
 ```
+
+
+## 🗂️ Project Structure
+
+-   `public/`: Contains static files and the `manifest.json`.
+-   `src/`: Contains the React app source code.
+-   `vite.config.ts`: Vite configuration file.
+-   `tsconfig.json`: TypeScript configuration file.
+-   `package.json`: Contains the project dependencies and scripts.
+
