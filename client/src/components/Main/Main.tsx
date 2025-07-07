@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
 import { Flex, Input, Field, Button, Stack, } from "@chakra-ui/react"
-import { getTestEndpoint } from '../../services/restApi.tsx'
+import { getTestEndpoint, testAPI, sendTopic } from '../../services/restApi.tsx'
 
 interface FormValues {
    topic: string;
@@ -17,7 +17,7 @@ function Main() {
         console.log("Submitted data:", data);
         console.log("Calling API...");
         try {
-            const response = await getTestEndpoint();
+            const response = await sendTopic(data.topic);
             console.log("API Response:", response);
         } catch (error) {
             console.error("Error calling API:", error);
@@ -48,7 +48,7 @@ function Main() {
                 <Button type="submit" bg="black" size="md"> Submit </Button>
             </Stack>
         </form>
-    
+        {/* <Button type="button" bg="blue" size="md" onClick={testAPI}> API </Button> */}
     </Flex>
   )
 }

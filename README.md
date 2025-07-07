@@ -10,11 +10,17 @@ Install the dependencies:
     npm install
     ```
 
-To start the development server:
+To start the Node backend server:
 
-```sh
-npm run dev
-```
+    ```sh
+    node server.js
+    ```
+
+To start the Vite frontend:
+
+    ```sh
+    npm run dev
+    ```
 
 This will start the Vite development server and open your default browser.
 
